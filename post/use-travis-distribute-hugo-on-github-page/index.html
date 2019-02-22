@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
 
   
-  <title>用 Travis CI 輕鬆部署 Hugo Blog 的 Github Page</title>
+  <title>用 Travis CI 輕鬆部署 Hugo Blog 到 Github Page</title>
 
   
   
@@ -24,26 +24,26 @@
 
   
   <meta name="author" content="kuotinyen">
-  <meta name="description" content="前陣子使用 Medium 寫文章感覺很不錯， 但是不支援程式碼 highlight 跟 markdown 還是有點困擾。 看過 jekyll, Hexo 跟 Hugo 後最後決定使用 Hugo。
-折騰了兩天，參考一些網路上的資源順利完成了。 現在可以輕鬆寫 markdown 文章，然後自動部署到 Github Page 上了，開心。
+  <meta name="description" content="前陣子使用 Medium 記錄學習的一些心得感覺很不錯， 但是不支援 code highlight &amp;amp; markdown 對工程師來說真的有點不方便。 嘗試過 Hexo，看了一些 Jekyll 的資料，還曾考慮用 github 的 issue 來寫 Blog， 最後用 Hugo 覺得很適合就決定是它了。
+折騰了幾天，參考一些網路上的資源順利完成了。 現在只管生出 markdown 文章， commit 到 github.io 後， Travis CI 就會幫我自動將文章部署到 Github Page 上，太爽了。
 ">
 
   
   
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@gohugoio">
-    <meta name="twitter:title" content="用 Travis CI 輕鬆部署 Hugo Blog 的 Github Page">
-    <meta name="twitter:description" content="前陣子使用 Medium 寫文章感覺很不錯， 但是不支援程式碼 highlight 跟 markdown 還是有點困擾。 看過 jekyll, Hexo 跟 Hugo 後最後決定使用 Hugo。
-折騰了兩天，參考一些網路上的資源順利完成了。 現在可以輕鬆寫 markdown 文章，然後自動部署到 Github Page 上了，開心。
+    <meta name="twitter:title" content="用 Travis CI 輕鬆部署 Hugo Blog 到 Github Page">
+    <meta name="twitter:description" content="前陣子使用 Medium 記錄學習的一些心得感覺很不錯， 但是不支援 code highlight &amp;amp; markdown 對工程師來說真的有點不方便。 嘗試過 Hexo，看了一些 Jekyll 的資料，還曾考慮用 github 的 issue 來寫 Blog， 最後用 Hugo 覺得很適合就決定是它了。
+折騰了幾天，參考一些網路上的資源順利完成了。 現在只管生出 markdown 文章， commit 到 github.io 後， Travis CI 就會幫我自動將文章部署到 Github Page 上，太爽了。
 ">
     <meta name="twitter:image" content="/images/avatar-wk.png">
   
 
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="用 Travis CI 輕鬆部署 Hugo Blog 的 Github Page">
-  <meta property="og:description" content="前陣子使用 Medium 寫文章感覺很不錯， 但是不支援程式碼 highlight 跟 markdown 還是有點困擾。 看過 jekyll, Hexo 跟 Hugo 後最後決定使用 Hugo。
-折騰了兩天，參考一些網路上的資源順利完成了。 現在可以輕鬆寫 markdown 文章，然後自動部署到 Github Page 上了，開心。
+  <meta property="og:title" content="用 Travis CI 輕鬆部署 Hugo Blog 到 Github Page">
+  <meta property="og:description" content="前陣子使用 Medium 記錄學習的一些心得感覺很不錯， 但是不支援 code highlight &amp;amp; markdown 對工程師來說真的有點不方便。 嘗試過 Hexo，看了一些 Jekyll 的資料，還曾考慮用 github 的 issue 來寫 Blog， 最後用 Hugo 覺得很適合就決定是它了。
+折騰了幾天，參考一些網路上的資源順利完成了。 現在只管生出 markdown 文章， commit 到 github.io 後， Travis CI 就會幫我自動將文章部署到 Github Page 上，太爽了。
 ">
   <meta property="og:url" content="/post/use-travis-distribute-hugo-on-github-page/">
   <meta property="og:image" content="/images/avatar-wk.png">
@@ -191,15 +191,17 @@
 
   <section class="main post-detail">
     <header class="post-header">
-      <h1 class="post-title">用 Travis CI 輕鬆部署 Hugo Blog 的 Github Page</h1>
+      <h1 class="post-title">用 Travis CI 輕鬆部署 Hugo Blog 到 Github Page</h1>
       <p class="post-meta">@kuotinyen · Feb 22, 2019 · 3 min read</p>
     </header>
-    <article class="post-content"><p>前陣子使用 Medium 寫文章感覺很不錯，<br/>
-但是不支援程式碼 highlight 跟 markdown 還是有點困擾。<br/>
-看過 jekyll, Hexo 跟 Hugo 後最後決定使用 Hugo。<br/></p>
+    <article class="post-content"><p>前陣子使用 Medium 記錄學習的一些心得感覺很不錯，<br/>
+但是不支援 code highlight &amp; markdown 對工程師來說真的有點不方便。<br/>
+嘗試過 Hexo，看了一些 Jekyll 的資料，還曾考慮用 github 的 issue 來寫 Blog，<br/>
+最後用 Hugo 覺得很適合就決定是它了。</p>
 
-<p>折騰了兩天，參考一些網路上的資源順利完成了。<br/>
-現在可以輕鬆寫 markdown 文章，然後自動部署到 Github Page 上了，開心。</p>
+<p>折騰了幾天，參考一些網路上的資源順利完成了。<br/>
+現在只管生出 markdown 文章， commit 到 github.io 後，<br/>
+Travis CI 就會幫我自動將文章部署到 Github Page 上，太爽了。</p>
 
 <h3 id="tl-dr">TL;DR</h3>
 
@@ -207,8 +209,8 @@
 
 <ul>
 <li>一步一步建立 Hugo Blog</li>
-<li>只需要管理一個 Repo，而不是編輯 Blog 一個 Repo，更新 Github Page 又一個 Repo</li>
-<li>編輯完 Blog 後只要 commit 就會觸發自動化流程更新 Github Page</li>
+<li>只需要管理一個 github.io Repo，而不是在 github.io Repo 外還要額外管理 Hugo Project Repo</li>
+<li>編輯 markdown 文章 commit 後自動部署到 Github Page 上</li>
 </ul>
 
 <hr />
@@ -235,37 +237,40 @@ cd <span style="color:#f92672">..</span>
 echo <span style="color:#960050;background-color:#1e0010">&#39;</span>theme <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hugo-nuo&#34;</span><span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">&gt;&gt;</span> config<span style="color:#f92672">.</span><span style="color:#a6e22e">toml</span></code></pre></div>
 <p><strong>一為全，全為一的 Repo 管理</strong></p>
 
-<p>多數網路上的教學文都會建議產生兩個 Repo，一個是編輯 Blog 的 Repo，<br/>
+<p>多數網路上的教學文都會建議產生兩個 Repo，<br/>
+一個是 Hugo Project 的 Repo，用於編輯 Hugo Blog；<br/>
 另一個則是負責更新 Github Page 的 xxx.github.io Repo。<br/></p>
 
-<p>Hugo 產生靜態 Blog 的原理是：<br/></p>
+<p>而 Hugo Project 產生靜態 Blog 的原理是：<br/></p>
 
 <blockquote>
-<p>對 Hugo Blog project 做任何編輯變更後，<br/>
+<p>對 Hugo Project 做任何編輯變更後，<br/>
 在其 public 目錄下產出 (html / css / js) 等網頁檔 output，<br/>
 之後上傳這些 web output 到靜態空間中 (ex: Github Page)，<br/></p>
 </blockquote>
 
-<p>因此將編輯和 output 分為兩個 Repo 的確是很直覺的想法。<br/></p>
+<p>因此將編輯 Hugo Blog 和只接收 public 中 web output 的 Github Page <br/>
+分為兩個 Repo 的確是很直覺的想法。<br/></p>
 
-<p>但這樣其實相當麻煩，<br/>
-在編輯完 Blog 後不僅要手動產生 public 中的 web output，<br/>
-又要手動上傳這些檔案到靜態空間上，<br/>
-且 public 內的檔案其實在我們編輯 Blog 時完全用不到，<br/>
-最後又要同時維護兩份 Repo，並不是很輕鬆的做法，我用 Hugo 就是想耍懶啊。 <br/></p>
+<p>但這樣其實相當麻煩，在編輯完 Blog 後不僅要手動產生 public 中的 web output，又要手動上傳這些檔案到靜態空間上。 <br/></p>
 
-<p>幸好後來找到了這篇文章<br/>
+<p>除此之外，public 內的檔案其實在我們編輯 Blog 時完全用不到<br/>
+最後又要同時維護兩份 Repo，並不是很輕鬆的做法。</p>
+
+<p><del>我用 Hugo 就是想耍懶啊！ </del></p>
+
+<p>幸好後來看到了這篇文章<br/>
 <a href="https://axdlog.com/zh/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/">利用Travis CI和Hugo將Blog自動部署到Github Pages</a>，<br/>
 給了我很大的幫助，感恩讚嘆 AxdLog 大大。</p>
 
-<p>如果你悟性不錯可以直接看那篇就好，這邊簡單解釋一下。 <br/></p>
+<p>如果你悟性不錯可以直接看那篇就好，這邊簡單說明一下。 <br/></p>
 
-<p>原理就是透過 git branch 將 Hugo Project 切割為，<br/>
-編輯 Blog 的 <strong>code branch (br-code)</strong> 以及產生 output 用的 <strong>master branch (br-master)</strong>。<br/></p>
+<p>原理就是透過 git branch 將 Hugo Project 切割為<br/>
+編輯 Blog 的 <strong>code branch ([br-code)</strong> 和 <br/>
+產生 output 用的 <strong>master branch (br-master)</strong>。<br/></p>
 
 <p>當 Hugo Project 編輯完畢後，在 <strong>(br-code)</strong> commit 並上傳到 Remote Repo，<br/>
-此時會觸發 Travis 啟動 CI 流程，協助你用 <strong>(br-code)</strong> 的 Hugo Project 製造出 <strong>(br-master)</strong> 要的 web output。<br/>
-最後 Travis 替你在 <strong>(br-master)</strong> 上面 commit， 自動更新 Github Page。<br/></p>
+此時會觸發 Travis 啟動 CI 流程並執行預先寫好的腳本，腳本的執行內容就是自動生成 web output，並且將這些網頁檔 commit 到 <strong>(br-master)</strong> 上，最後更新到 Github Page。</p>
 
 <p>下面就來依序配置 <strong>(br-code)</strong> 和 <strong>(br-master)</strong>。</p>
 
@@ -286,8 +291,7 @@ gsed <span style="color:#f92672">-</span>r <span style="color:#f92672">-</span>i
 
 <span style="color:#75715e">// 這邊可能會有 submodule 的 warning，因為之後要串 Travis 
 </span><span style="color:#75715e">// 所以這邊暫時將 hugo-nuo 去模組化，以資料夾的形式來 git add
-</span><span style="color:#75715e"></span>
-git rm <span style="color:#f92672">-</span>f <span style="color:#f92672">--</span>cached themes<span style="color:#f92672">/</span>hugo<span style="color:#f92672">-</span>nuo
+</span><span style="color:#75715e"></span>git rm <span style="color:#f92672">-</span>f <span style="color:#f92672">--</span>cached themes<span style="color:#f92672">/</span>hugo<span style="color:#f92672">-</span>nuo
 git add themes<span style="color:#f92672">/</span>hugo<span style="color:#f92672">-</span>nuo<span style="color:#f92672">/</span> 
 
 git commit <span style="color:#f92672">-</span>m <span style="color:#e6db74">&#34;Hugo generator code&#34;</span>
@@ -310,8 +314,7 @@ git clean <span style="color:#f92672">-</span>fdx</code></pre></div>
 
 <span style="color:#75715e">// 這邊可能會有 submodule 的 warning，因為之後要串 Travis 
 </span><span style="color:#75715e">// 所以這邊暫時將 hugo-nuo 去模組化，以資料夾的形式來 git add
-</span><span style="color:#75715e"></span>
-git rm <span style="color:#f92672">-</span>f <span style="color:#f92672">--</span>cached themes<span style="color:#f92672">/</span>hugo<span style="color:#f92672">-</span>nuo
+</span><span style="color:#75715e"></span>git rm <span style="color:#f92672">-</span>f <span style="color:#f92672">--</span>cached themes<span style="color:#f92672">/</span>hugo<span style="color:#f92672">-</span>nuo
 git add themes<span style="color:#f92672">/</span>hugo<span style="color:#f92672">-</span>nuo<span style="color:#f92672">/</span> 
 
 git commit <span style="color:#f92672">-</span>m <span style="color:#960050;background-color:#1e0010">&#39;</span>Initial blog content<span style="color:#960050;background-color:#1e0010">&#39;</span>
@@ -322,23 +325,22 @@ git push <span style="color:#f92672">-</span>u origin master</code></pre></div>
 
 <h3 id="travis-ci">Travis CI</h3>
 
-<p>首先打開 xxx.github.io 的開關，<br/>
-之後如圖所示設定 Github 相關資訊：</p>
+<p>打開 xxx.github.io 的開關，如圖所示設定 Github 相關資訊：</p>
 
 <p><img src="/media/posts/use-travis-distribute-hugo-on-github-page/travis-settings.png" alt="Travis Settings" /></p>
 
 <ul>
-<li>GITHUB_USERNAME 你的 github 名稱</li>
-<li>GITHUB_EMAIL 你的 Github email (ex: xxx@gmail.com)</li>
-<li>GITHUB_TOKEN 你的 Github Developer Token</li>
-<li>CNAME_URL 你想使用的 Custom Domain</li>
+<li>GITHUB_USERNAME：你的 Github 名稱</li>
+<li>GITHUB_EMAIL：你的 Github email (ex: xxx@gmail.com)</li>
+<li>GITHUB_TOKEN：你的 Github Developer Token</li>
+<li>CNAME_URL：你想使用的 Custom Domain</li>
 </ul>
 
 <p>最後，切回 <strong>(br-code)</strong> 並在 Blog 根目錄新增一個 .travis.yml 檔案，<br/></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">git checkout code
 vim <span style="color:#f92672">.</span><span style="color:#a6e22e">travis</span><span style="color:#f92672">.</span><span style="color:#a6e22e">yml</span></code></pre></div>
 <p>將下面的 go 程式碼填入 yml 中，<br/>
-然後 commit 到 remote 去，Travis 應該會在這次 commit 發動。<br/></p>
+然後 commit 到 remote 去，Travis 應該會被這個 commit 觸發。<br/></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#960050;background-color:#1e0010">#</span> https:<span style="color:#75715e">//docs.travis-ci.com/user/deployment/pages/
 </span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">#</span> https:<span style="color:#75715e">//docs.travis-ci.com/user/reference/xenial/
 </span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">#</span> https:<span style="color:#75715e">//docs.travis-ci.com/user/languages/go/
@@ -374,6 +376,12 @@ deploy:
   target_branch: master  <span style="color:#960050;background-color:#1e0010">#</span> branch contains blog content
   on:
     branch: code  <span style="color:#960050;background-color:#1e0010">#</span> branch contains Hugo generator code</code></pre></div>
+<p>之後任何編輯 Blog 的行為都會透過 Travis CI 自動化更新 Github Page 了，恭喜你。</p>
+
+<hr />
+
+<p><strong>小提醒</strong></p>
+
 <p>如果有缺少 content 路徑的錯誤訊息，<br/>
 那是因為新增第一篇文章後才會產生 content 目錄，<br/>
 解決的方法很簡單，新增一篇測試的文章來產生 content 目錄：</p>
@@ -385,8 +393,6 @@ deploy:
 <p>換句話說，如果你希望這篇文章暫時不要發布的話，<br/>
 draft 欄位請設為 true。 <br/></p>
 
-<p>之後任何編輯 Blog 的行為都會透過 Travis CI 幫你自動化產生 Github Page 了，可喜可賀。</p>
-
 <p>分享結束，祝你順利: ) <br/></p></article>
     <footer class="post-footer">
       
@@ -396,7 +402,11 @@ draft 欄位請設為 true。 <br/></p>
         
           <li><a href="/tags/github"><span class="tag">Github</span></a></li>
         
+          <li><a href="/tags/github-page"><span class="tag">Github Page</span></a></li>
+        
           <li><a href="/tags/travis"><span class="tag">Travis</span></a></li>
+        
+          <li><a href="/tags/blog"><span class="tag">Blog</span></a></li>
         
       </ul>
       

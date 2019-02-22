@@ -8,8 +8,9 @@
   </url>
   
   <url>
-    <loc>/post/test/</loc>
-    <lastmod>2019-02-22T14:53:20+08:00</lastmod>
+    <loc>/tags/blog/</loc>
+    <lastmod>2019-02-22T15:10:26+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -19,6 +20,12 @@
   
   <url>
     <loc>/tags/github/</loc>
+    <lastmod>2019-02-22T15:10:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/github-page/</loc>
     <lastmod>2019-02-22T15:10:26+08:00</lastmod>
     <priority>0</priority>
   </url>
