@@ -26,5 +26,14 @@
 現在可以輕鬆寫 markdown 文章，然後自動部署到 Github Page 上了，開心。&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Test</title>
+      <link>/post/test/</link>
+      <pubDate>Fri, 22 Feb 2019 14:53:20 +0800</pubDate>
+      
+      <guid>/post/test/</guid>
+      <description>&lt;p&gt;測試用的簡單敘述。&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
