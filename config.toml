@@ -1,4 +1,37 @@
-baseURL = "http://example.org/"
+baseURL = ""
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "郭亭巖 (kuotinyen)"
 theme = "hugo-nuo"
+
+enableRobotsTXT = true
+PygmentsCodeFences = true
+canonifyurls = true
+
+# Copyright of your post
+copyright = "© Copyright © 2018 Ting-Yen Kuo. All rights reserved."
+
+[[menu.main]]
+  name = "Home"
+  weight = 10
+  identifier = "home"
+  url = "/"
+
+[[menu.main]]
+  name = "Tags"
+  weight = 30
+  identifier = "tags"
+  url = "/tags/"
+
+[params]
+  author = "kuotinyen"
+  bg = "images/grey-prism.svg"
+  avatar = "images/avatar-wk.png"
+  seotitle = "kuotinyen (WK)"
+  subtitle = "iOS、生活工作的發現和心得"
+  description = "記錄iOS、生活工作的發現和心得"
+  paginate = 10
+
+  # Contact 
+  email = "kuotinyen@gmail.com"
+  github = "kuotinyen"
+  linkedin = "ting-yen-kuo-01a122126"
