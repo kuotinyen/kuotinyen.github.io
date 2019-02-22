@@ -7,18 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright © 2018 Ting-Yen Kuo. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 22 Feb 2019 14:53:20 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 22 Feb 2019 15:10:26 +0800</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Test</title>
-      <link>/post/test/</link>
-      <pubDate>Fri, 22 Feb 2019 14:53:20 +0800</pubDate>
+      <title>用 Travis CI 輕鬆部署 Hugo Blog 的 Github Page</title>
+      <link>/post/use-travis-distribute-hugo-on-github-page/</link>
+      <pubDate>Fri, 22 Feb 2019 15:10:26 +0800</pubDate>
       
-      <guid>/post/test/</guid>
-      <description>&lt;p&gt;測試用的簡單敘述。&lt;/p&gt;</description>
+      <guid>/post/use-travis-distribute-hugo-on-github-page/</guid>
+      <description>&lt;p&gt;前陣子使用 Medium 寫文章感覺很不錯，&lt;br/&gt;
+但是不支援程式碼 highlight 跟 markdown 還是有點困擾。&lt;br/&gt;
+看過 jekyll, Hexo 跟 Hugo 後最後決定使用 Hugo。&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;折騰了兩天，參考一些網路上的資源順利完成了。&lt;br/&gt;
+現在可以輕鬆寫 markdown 文章，然後自動部署到 Github Page 上了，開心。&lt;/p&gt;</description>
     </item>
     
   </channel>
