@@ -9,6 +9,7 @@ canonifyurls = true
 pygmentsStyle = "onedark"
 
 googleAnalytics = "UA-135283144-1"
+disqusShortname = "kuotinyen"
 
 # Copyright of your post
 copyright = "© Copyright © 2018 Ting-Yen Kuo. All rights reserved."
