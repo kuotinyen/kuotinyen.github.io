@@ -227,15 +227,15 @@ Travis CI 就會自動把剛寫的文章生成網頁檔上傳到 Github Page 上
 <p><strong>建立一個 Hugo Blog</strong></p>
 
 <p>在想要建立 Hugo Blog Project 的地方下指令：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo new site my-blog
-cd my-blog</code></pre></div>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo new site my-blog
+<span style="color:#fff;font-weight:bold">cd</span> my-blog</code></pre></div>
 <p><strong>下載 Nuo theme</strong></p>
 
 <p>清爽好用的 Hugo theme，還支援 RWD。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd themes
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#fff;font-weight:bold">cd</span> themes
 git clone git@github.com:laozhu/hugo-nuo.git
-cd ..
-echo <span style="color:#e6db74">&#39;theme = &#34;hugo-nuo&#34;&#39;</span> &gt;&gt; config.toml</code></pre></div>
+<span style="color:#fff;font-weight:bold">cd</span> ..
+<span style="color:#fff;font-weight:bold">echo</span> <span style="color:#0ff;font-weight:bold">&#39;theme = &#34;hugo-nuo&#34;&#39;</span> &gt;&gt; config.toml</code></pre></div>
 <p><strong>合而為一的 Repo 管理</strong></p>
 
 <p>多數網路上的教學文都會建議使用兩個 Repo，<br/>
@@ -277,13 +277,13 @@ echo <span style="color:#e6db74">&#39;theme = &#34;hugo-nuo&#34;&#39;</span> &gt
 <p><strong>配置 (br-code)</strong></p>
 
 <p>首先 init git 以及 (br-code)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git init
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git init
 git checkout -b code</code></pre></div>
 <p>讓 <strong>(br-code)</strong> 忽略 public 資料夾</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">echo <span style="color:#e6db74">&#39;/public/&#39;</span> &gt;&gt; .gitignore
-gsed -r -i <span style="color:#e6db74">&#39;/^\/public\/$/{$!d}&#39;</span> .gitignore</code></pre></div>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#fff;font-weight:bold">echo</span> <span style="color:#0ff;font-weight:bold">&#39;/public/&#39;</span> &gt;&gt; .gitignore
+gsed -r -i <span style="color:#0ff;font-weight:bold">&#39;/^\/public\/$/{$!d}&#39;</span> .gitignore</code></pre></div>
 <p>將改變推到 remote</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shel" data-lang="shel">git add .
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shel" data-lang="shel">git add .
 
 // 這邊可能會有 submodule 的 warning，因為之後要串 Travis CI 不想牽扯到 git submodule
 // 所以這邊暫時將 hugo-nuo 去模組化，以資料夾的形式來做 git add
@@ -294,28 +294,28 @@ git commit -m &#34;Hugo generator code&#34;
 git remote add origin git@github.com:kuotinyen/kuotinyen.github.io.git
 git push -u origin code</code></pre></div>
 <p>產生 public folder 並暫時存於某資料夾 (之後會再刪除)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shel" data-lang="shel">hugo
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shel" data-lang="shel">hugo
 HUGO_TEMP_DIR=$(mktemp -d)
 cp -R public/* &#34;$HUGO_TEMP_DIR&#34;</code></pre></div>
 <p><strong>配置 (br-master)</strong></p>
 
 <p>產生 <strong>(br-master)</strong> 並 clean folder</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git checkout --orphan master
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git checkout --orphan master
 rm .git/index
 git clean -fdx</code></pre></div>
 <p>將剛剛暫存的資料夾重新放回 public</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cp -R <span style="color:#e6db74">&#34;</span>$HUGO_TEMP_DIR<span style="color:#e6db74">&#34;</span>/. .</code></pre></div>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cp -R <span style="color:#0ff;font-weight:bold">&#34;</span>$HUGO_TEMP_DIR<span style="color:#0ff;font-weight:bold">&#34;</span>/. .</code></pre></div>
 <p>將改變推到 remote</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git add .
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git add .
 
 // 和 code 的部分一樣，暫時解決 git submodule 的問題
 git rm -f --cached themes/hugo-nuo
 git add themes/hugo-nuo/ 
 
-git commit -m <span style="color:#e6db74">&#39;Initial blog content&#39;</span>
+git commit -m <span style="color:#0ff;font-weight:bold">&#39;Initial blog content&#39;</span>
 git push -u origin master</code></pre></div>
 <p>砍掉剛剛的暫存資料夾</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[[</span> -d <span style="color:#e6db74">&#34;</span>$HUGO_TEMP_DIR<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]]</span> <span style="color:#f92672">&amp;&amp;</span> rm -rf <span style="color:#e6db74">&#34;</span>$HUGO_TEMP_DIR<span style="color:#e6db74">&#34;</span></code></pre></div>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">[[ -d <span style="color:#0ff;font-weight:bold">&#34;</span>$HUGO_TEMP_DIR<span style="color:#0ff;font-weight:bold">&#34;</span> ]] &amp;&amp; rm -rf <span style="color:#0ff;font-weight:bold">&#34;</span>$HUGO_TEMP_DIR<span style="color:#0ff;font-weight:bold">&#34;</span></code></pre></div>
 <hr />
 
 <h3 id="travis-ci">Travis CI</h3>
@@ -333,45 +333,45 @@ git push -u origin master</code></pre></div>
 </ul>
 
 <p>最後，切回 <strong>(br-code)</strong> 並在 Blog 根目錄新增一個 .travis.yml 檔案，<br/></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git checkout code
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git checkout code
 vim .travis.yml</code></pre></div>
 <p>將下方的 go 腳本填入 .travis.yml 中，<br/>
 並且在 <strong>(br-code)</strong> commit 到 remote，Travis CI 的腳本應該會被這個 commit 觸發。<br/></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># https://docs.travis-ci.com/user/deployment/pages/</span>
-<span style="color:#75715e"># https://docs.travis-ci.com/user/reference/xenial/</span>
-<span style="color:#75715e"># https://docs.travis-ci.com/user/languages/go/</span>
-<span style="color:#75715e"># https://docs.travis-ci.com/user/customizing-the-build/</span>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#007f7f"># https://docs.travis-ci.com/user/deployment/pages/</span>
+<span style="color:#007f7f"># https://docs.travis-ci.com/user/reference/xenial/</span>
+<span style="color:#007f7f"># https://docs.travis-ci.com/user/languages/go/</span>
+<span style="color:#007f7f"># https://docs.travis-ci.com/user/customizing-the-build/</span>
 
 dist: xenial
 language: go
 go:
     - master
 
-<span style="color:#75715e"># before_install</span>
-<span style="color:#75715e"># install - install any dependencies required</span>
+<span style="color:#007f7f"># before_install</span>
+<span style="color:#007f7f"># install - install any dependencies required</span>
 install:
-    - go get github.com/gohugoio/hugo    <span style="color:#75715e"># consume time 70.85s</span>
+    - go get github.com/gohugoio/hugo    <span style="color:#007f7f"># consume time 70.85s</span>
 
 before_script:
-    - rm -rf public <span style="color:#ae81ff">2</span>&gt; /dev/null
+    - rm -rf public <span style="color:#ff0;font-weight:bold">2</span>&gt; /dev/null
 
-<span style="color:#75715e"># script - run the build script</span>
+<span style="color:#007f7f"># script - run the build script</span>
 script:
     - hugo
-    - echo <span style="color:#e6db74">&#34;</span>$CNAME_URL<span style="color:#e6db74">&#34;</span> &gt; public/CNAME
+    - <span style="color:#fff;font-weight:bold">echo</span> <span style="color:#0ff;font-weight:bold">&#34;</span>$CNAME_URL<span style="color:#0ff;font-weight:bold">&#34;</span> &gt; public/CNAME
 
 deploy:
   provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN  <span style="color:#75715e"># Set in travis-ci.org dashboard, marked secure</span>
+  skip-cleanup: <span style="color:#fff;font-weight:bold">true</span>
+  github-token: $GITHUB_TOKEN  <span style="color:#007f7f"># Set in travis-ci.org dashboard, marked secure</span>
   email: $GITHUB_EMAIL
   name: $GITHUB_USERNAME
-  verbose: true
-  keep-history: true
+  verbose: <span style="color:#fff;font-weight:bold">true</span>
+  keep-history: <span style="color:#fff;font-weight:bold">true</span>
   local-dir: public
-  target_branch: master  <span style="color:#75715e"># branch contains blog content</span>
+  target_branch: master  <span style="color:#007f7f"># branch contains blog content</span>
   on:
-    branch: code  <span style="color:#75715e"># branch contains Hugo generator code</span></code></pre></div>
+    branch: code  <span style="color:#007f7f"># branch contains Hugo generator code</span></code></pre></div>
 <p>之後任何修改 Blog 的行為都會透過 Travis CI 自動更新 Github Page 了，<br/>
 恭喜你！從今以後不需要花任何伺服器費用，也可以只用 markdown 發佈新文章！</p>
 
@@ -383,7 +383,7 @@ deploy:
 因為 Hugo 會在新增第一篇文章後才產生 content 目錄。<br/></p>
 
 <p>解決的方法很簡單，只要新增一篇測試的文章來產生 content 目錄即可：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo new post/test.md</code></pre></div>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo new post/test.md</code></pre></div>
 <p>請注意 commit 這個 test.md 時，文章資訊的 draft 欄位不可為 true，<br/>
 因為如果該文章被 Hugo 視為草稿，就會在產生網頁檔時被略過，<br/>
 最後這篇文章將不會被更新到 Github Page 上，缺少 content 目錄的錯誤會繼續存在。 <br/></p>
