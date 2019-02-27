@@ -41,7 +41,7 @@ Travis CI 就會自動把剛寫的文章生成網頁檔上傳到 Github Page 上
 
 在想要建立 Hugo Blog Project 的地方下指令：
 
-```java
+```shell
 hugo new site my-blog
 cd my-blog
 ```
@@ -50,7 +50,7 @@ cd my-blog
 
 清爽好用的 Hugo theme，還支援 RWD。
 
-```java
+```shell
 cd themes
 git clone git@github.com:laozhu/hugo-nuo.git
 cd ..
@@ -98,21 +98,21 @@ echo 'theme = "hugo-nuo"' >> config.toml
 
 首先 init git 以及 (br-code)
 
-```java
+```shell
 git init
 git checkout -b code
 ```
 
 讓 **(br-code)** 忽略 public 資料夾
 
-```java
+```shell
 echo '/public/' >> .gitignore
 gsed -r -i '/^\/public\/$/{$!d}' .gitignore
 ```
 
 將改變推到 remote 
 
-```java
+```shel
 git add .
 
 // 這邊可能會有 submodule 的 warning，因為之後要串 Travis CI 不想牽扯到 git submodule
@@ -127,7 +127,7 @@ git push -u origin code
 
 產生 public folder 並暫時存於某資料夾 (之後會再刪除)
 
-```java
+```shel
 hugo
 HUGO_TEMP_DIR=$(mktemp -d)
 cp -R public/* "$HUGO_TEMP_DIR"
@@ -137,7 +137,7 @@ cp -R public/* "$HUGO_TEMP_DIR"
 
 產生 **(br-master)** 並 clean folder
 
-```java
+```shell
 git checkout --orphan master
 rm .git/index
 git clean -fdx
@@ -145,13 +145,13 @@ git clean -fdx
 
 將剛剛暫存的資料夾重新放回 public 
 
-```java
+```shell
 cp -R "$HUGO_TEMP_DIR"/. .
 ```
 
 將改變推到 remote 
 
-```java
+```shell
 git add .
 
 // 和 code 的部分一樣，暫時解決 git submodule 的問題
@@ -164,7 +164,7 @@ git push -u origin master
 
 砍掉剛剛的暫存資料夾
 
-```java
+```shell
 [[ -d "$HUGO_TEMP_DIR" ]] && rm -rf "$HUGO_TEMP_DIR"
 ```
 
@@ -187,7 +187,7 @@ git push -u origin master
 最後，切回 **(br-code)** 並在 Blog 根目錄新增一個 .travis.yml 檔案，<br/>
 
 
-```java
+```shell
 git checkout code
 vim .travis.yml
 ```
@@ -195,7 +195,7 @@ vim .travis.yml
 將下方的 go 腳本填入 .travis.yml 中，<br/>
 並且在 **(br-code)** commit 到 remote，Travis CI 的腳本應該會被這個 commit 觸發。<br/>
 
-```java
+```shell
 # https://docs.travis-ci.com/user/deployment/pages/
 # https://docs.travis-ci.com/user/reference/xenial/
 # https://docs.travis-ci.com/user/languages/go/
@@ -245,7 +245,7 @@ deploy:
 
 解決的方法很簡單，只要新增一篇測試的文章來產生 content 目錄即可：
 
-```java
+```shell
 hugo new post/test.md
 ```
 
